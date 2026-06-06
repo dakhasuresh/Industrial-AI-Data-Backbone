@@ -197,22 +197,27 @@ AI-powered Workforce Intelligence optimizes technician dispatch, captures and tr
 
 ```mermaid
 sequenceDiagram
-    participant TECH as Field Technician (Mobile)
-    participant APP as Industrial Field App
+    participant TECH as Field Technician
+    participant APP as Field App
     participant KG as Knowledge Graph
-    participant HIST as Process Historian
+    participant HIST as Historian
     participant LLM as Industrial LLM
+    participant CMMS as CMMS
 
-    TECH->>APP: Opens work order: PUMP-07 vibration alarm
-    APP->>HIST: Query: PUMP-07 sensor data last 7 days
-    APP->>KG: Query: PUMP-07 failure history, failure modes
-    APP->>LLM: "Vibration alarm on PUMP-07. Historical context: [data]. What is most likely cause and diagnosis steps?"
-    LLM->>APP: Most likely: bearing failure (80% confidence)\nBased on: 3 similar events in 2019, 2021, 2022\nDiagnosis steps: 1. Check bearing temp\n2. Take vibration spectrum\n3. Compare to baseline
-    APP->>TECH: Display: Probable cause + step-by-step guide + photos from previous repair
-    TECH->>APP: Confirms bearing issue; requests parts
-    APP->>CMMS: Auto-create parts request (bearing 6308-2RS)
-    TECH->>APP: Repair complete + notes entered
-    APP->>KG: Update: New repair record linked to failure mode
+    TECH->>APP: Open work order - PUMP-07 vibration alarm
+    APP->>HIST: Query PUMP-07 sensor data last 7 days
+    APP->>KG: Query PUMP-07 failure history and failure modes
+    HIST-->>APP: Return time-series data
+    KG-->>APP: Return asset context and past failures
+    APP->>LLM: Analyse vibration alarm with historical context
+    LLM-->>APP: Probable cause - bearing failure 80% confidence
+    LLM-->>APP: Steps - check temp, take spectrum, compare baseline
+    APP->>TECH: Show probable cause, diagnosis steps, repair photos
+    TECH->>APP: Confirm bearing fault and request parts
+    APP->>CMMS: Create parts request for bearing 6308-2RS
+    CMMS-->>APP: Parts request confirmed
+    TECH->>APP: Repair complete, enter notes
+    APP->>KG: Update knowledge graph with new repair record
 ```
 
 **Key capabilities:**
