@@ -198,7 +198,7 @@ AI-powered Workforce Intelligence optimizes technician dispatch, captures and tr
 ```mermaid
 sequenceDiagram
     participant TECH as Field Technician (Mobile)
-    participant APP as iEdgeX Field App
+    participant APP as Industrial Field App
     participant KG as Knowledge Graph
     participant HIST as Process Historian
     participant LLM as Industrial LLM

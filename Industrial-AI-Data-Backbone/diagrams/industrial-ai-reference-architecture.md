@@ -168,7 +168,7 @@ graph TB
     subgraph Z3_BOX["🏢 Zone 3 — IT/OT Integration\n(SL 2)"]
         UNS_BROKER["UNS Broker\n(HiveMQ)"]
         MES_IT["MES / CMMS Systems"]
-        EDGE_COMPUTE["iEdgeX Edge Nodes"]
+        EDGE_COMPUTE["Industrial Edge Nodes"]
     end
 
     subgraph Z4_BOX["☁️ Zone 4 — Enterprise/Cloud\n(IT Controls)"]
@@ -229,14 +229,14 @@ flowchart TD
 
 ---
 
-## Diagram 6: iEdgeX Three-Pillar Model
+## Diagram 6: Industrial AI Three-Pillar Model
 
 ```mermaid
 graph TB
     subgraph P1["PILLAR 1\nOT/IT Connectivity & Data Integration"]
         direction LR
         P1A["Industrial Protocol\nSupport (OPC-UA, Modbus,\nSparkplug B, EIP, Profinet)"]
-        P1B["iEdgeX Edge Nodes\n(Per area / zone)"]
+        P1B["Industrial Edge Nodes\n(Per area / zone)"]
         P1C["Unified Namespace\n(HiveMQ + Schema Registry)"]
         P1D["IEC 62443 Security\n(DMZ, mTLS, PKI)"]
     end

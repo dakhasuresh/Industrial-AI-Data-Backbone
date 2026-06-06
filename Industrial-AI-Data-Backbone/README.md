@@ -63,7 +63,6 @@ Industrial-AI-Data-Backbone/
 │   ├── industrial-ai-maturity-model.md            ← AI maturity model (5 levels)
 │   ├── agent-fabric-architecture.md               ← Multi-agent AI architecture
 │   ├── iec62443-security-reference.md             ← OT security reference
-│   └── iedgex-reference-architecture.md           ← iEdgeX Edge-to-Cloud reference
 │
 ├── examples/
 │   ├── manufacturing-use-cases.md                 ← Manufacturing AI use cases
@@ -137,17 +136,6 @@ graph TB
 
 ---
 
-## iEdgeX Reference Architecture
-
-**iEdgeX** is a unified Edge-to-Cloud Industrial AI Backbone built on three foundational pillars:
-
-| Pillar | Name | Purpose |
-|--------|------|---------|
-| **Pillar 1** | OT/IT Connectivity & Data Integration | Connect every industrial data source securely and reliably |
-| **Pillar 2** | Industrial Data Foundation & Contextualization | Transform raw data into contextual, AI-ready information |
-| **Pillar 3** | AI, Analytics & Agentic Intelligence | Deploy intelligent, autonomous, and explainable AI at scale |
-
-→ Full architecture: [docs/iedgex-reference-architecture.md](docs/iedgex-reference-architecture.md)
 
 ---
 
@@ -177,7 +165,6 @@ Level 1 ████                  Data Collection
 | [AI Maturity Model](docs/industrial-ai-maturity-model.md) | Five-level framework from data collection to agentic operations |
 | [Agent Fabric Architecture](docs/agent-fabric-architecture.md) | Multi-agent industrial AI systems design |
 | [IEC 62443 Security Reference](docs/iec62443-security-reference.md) | OT cybersecurity architecture based on IEC 62443 |
-| [iEdgeX Reference Architecture](docs/iedgex-reference-architecture.md) | Unified Edge-to-Cloud backbone architecture |
 
 ---
 

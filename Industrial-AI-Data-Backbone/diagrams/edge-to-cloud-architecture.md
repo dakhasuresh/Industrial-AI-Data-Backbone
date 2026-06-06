@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document provides the complete visual reference for the iEdgeX Edge-to-Cloud Industrial AI architecture — from field sensors to enterprise intelligence.
+This document provides the complete visual reference for the Industrial Edge-to-Cloud AI architecture — from field sensors to enterprise intelligence.
 
 ---
 
@@ -31,9 +31,9 @@ graph TB
     end
 
     subgraph EDGE["⚙️ Edge Layer — Protocol Translation & Local Analytics"]
-        GW_A["iEdgeX Edge Node A\n(Area 1)\nOPC-UA + Sparkplug B"]:::edge
-        GW_B["iEdgeX Edge Node B\n(Area 2)\nModbus → OPC-UA"]:::edge
-        GW_C["iEdgeX Edge Node C\n(Utilities)\nBACnet + Modbus"]:::edge
+        GW_A["Industrial Edge Node A\n(Area 1)\nOPC-UA + Sparkplug B"]:::edge
+        GW_B["Industrial Edge Node B\n(Area 2)\nModbus → OPC-UA"]:::edge
+        GW_C["Industrial Edge Node C\n(Utilities)\nBACnet + Modbus"]:::edge
         EDGE_AI["Edge AI Runtime\n(Anomaly Detection + Local Rules)"]:::edge
         STORE_FWD["Store & Forward\n(72hr buffer)"]:::edge
     end
@@ -177,7 +177,7 @@ graph LR
 
     subgraph ZONE3["Zone 3 — OT Supervisory / IT"]
         MQTT_BROKER["UNS Broker\n(HiveMQ)"]
-        EDGE_NODES["iEdgeX Edge\nNodes"]
+        EDGE_NODES[" Edge\nNodes"]
         MES_SERVER["MES Server"]
         CMMS_SERVER["CMMS Server"]
     end
@@ -211,7 +211,7 @@ graph LR
 
 ```mermaid
 graph LR
-    EDGE_NODE["iEdgeX Edge Node\n(On-premises)"] -->|"MQTT/TLS → Event Hub"| AZURE_EH["Azure Event Hub"]
+    EDGE_NODE["Industrial Edge Node\n(On-premises)"] -->|"MQTT/TLS → Event Hub"| AZURE_EH["Azure Event Hub"]
     AZURE_EH --> AZURE_STREAM["Azure Stream Analytics\n(Real-time processing)"]
     AZURE_STREAM --> ADX["Azure Data Explorer\n(Hot path)"]
     AZURE_STREAM --> ADLS["Azure Data Lake\nStorage Gen2 (Warm/Cold)"]
@@ -226,7 +226,7 @@ graph LR
 
 ```mermaid
 graph LR
-    EDGE["iEdgeX Edge\n(Per area)"]
+    EDGE[" Edge\n(Per area)"]
     ON_PREM_UNS["On-Premises UNS\n(HiveMQ)"]
     ON_PREM_DATA["On-Premises Data Platform\n(Historian + SQL Server)"]
     CLOUD_BRIDGE["Selective Cloud Sync\n(Aggregated / anonymized)"]
@@ -244,5 +244,5 @@ graph LR
 ## Related Documents
 
 - [Industrial AI Reference Architecture](../docs/industrial-ai-reference-architecture.md)
-- [iEdgeX Reference Architecture](../docs/iedgex-reference-architecture.md)
+- [Industrial AI Reference Architecture](../docs/industrial-ai-reference-architecture.md)
 - [Agent Fabric Diagram](agent-fabric-diagram.md)

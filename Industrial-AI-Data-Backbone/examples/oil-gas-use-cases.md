@@ -46,7 +46,7 @@ graph TB
         DOWNHOLE["Downhole Gauge\n(Optional)"]
     end
 
-    subgraph FIELD_EDGE["Field Edge (iEdgeX)"]
+    subgraph FIELD_EDGE["Field Edge ()"]
         WELL_MODEL["Well Performance\nModel (per well)"]
         INFLOW["Inflow Performance\nCurve Tracking"]
         LIFT_EFFICIENCY["Lift Efficiency\nCalculation"]
@@ -235,7 +235,7 @@ graph LR
     end
 
     subgraph FIELD_OFFICE["Field Office / PoP"]
-        EDGE_AGG["Edge Aggregator\n(iEdgeX Node)"]
+        EDGE_AGG["Edge Aggregator\n(Industrial Edge Node)"]
         LOCAL_HIST["Local Historian\n(72hr buffer)"]
     end
 
@@ -270,4 +270,4 @@ graph LR
 - [Manufacturing Use Cases](manufacturing-use-cases.md)
 - [Utility Use Cases](utility-use-cases.md)
 - [Industrial AI Reference Architecture](../docs/industrial-ai-reference-architecture.md)
-- [iEdgeX Reference Architecture](../docs/iedgex-reference-architecture.md)
+- [Industrial AI Reference Architecture](../docs/industrial-ai-reference-architecture.md)

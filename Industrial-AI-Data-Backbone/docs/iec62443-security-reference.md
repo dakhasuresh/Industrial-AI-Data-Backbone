@@ -328,5 +328,5 @@ graph LR
 ## Related Documents
 
 - [Industrial AI Reference Architecture](industrial-ai-reference-architecture.md)
-- [iEdgeX Reference Architecture](iedgex-reference-architecture.md)
+- [Industrial AI Reference Architecture](industrial-ai-reference-architecture.md)
 - [Agent Fabric Architecture](agent-fabric-architecture.md)

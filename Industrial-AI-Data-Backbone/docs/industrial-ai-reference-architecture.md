@@ -434,4 +434,4 @@ Recommended for organizations with multiple plants, refineries, or facilities.
 - [AI Maturity Model](industrial-ai-maturity-model.md)
 - [Agent Fabric Architecture](agent-fabric-architecture.md)
 - [IEC 62443 Security Reference](iec62443-security-reference.md)
-- [iEdgeX Reference Architecture](iedgex-reference-architecture.md)
+- [Industrial AI Reference Architecture](industrial-ai-reference-architecture.md)

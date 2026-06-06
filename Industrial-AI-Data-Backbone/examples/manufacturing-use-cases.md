@@ -59,7 +59,7 @@ graph TB
         CURRENT_MON["Current Monitoring\n(CT clamps)"]
     end
 
-    subgraph EDGE["Edge Processing (iEdgeX)"]
+    subgraph EDGE["Edge Processing"]
         FFT["FFT Computation\n(Frequency spectrum)"]
         STATS["Statistical Features\n(RMS, kurtosis, crest factor)"]
         THRESHOLD["Threshold Alert\n(immediate alarm)"]
@@ -78,7 +78,7 @@ graph TB
     end
 
     subgraph ACTION["Action & Workflow"]
-        MAINT_AGENT["Maintenance Agent\n(iEdgeX Agent Fabric)"]
+        MAINT_AGENT["Maintenance Agent\n(Industrial Agent Fabric)"]
         CMMS_WO["Work Order\n(CMMS)"]
         PLANNER["Maintenance Planner\nNotification"]
     end

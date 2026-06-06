@@ -74,7 +74,7 @@
 
 ### Target Architecture
 
-> *[Describe the target state architecture in 1–2 paragraphs. Reference the iEdgeX Reference Architecture or your chosen framework.]*
+> *[Describe the target state architecture in 1–2 paragraphs. Reference the Industrial AI Reference Architecture or your chosen framework.]*
 
 ### Success Metrics (KPIs)
 
